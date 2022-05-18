@@ -1,0 +1,89 @@
+{% extends 'admin_templates/base_template.html' %}
+{% block page_title %}
+Parent apply for children leave
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Parent Apply for leave</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              
+              <div class="table">
+                <table class="table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Parent ID</th>
+                        <th>Parent Name</th>
+                        <th>Leave Date</th>
+                        <th>Leave Message</th>
+                        <th>Apply On</th>
+                        <th>Action</th>
+                    </tr>
+                    {% for leave in leaves %}
+                        <tr>
+                            <td>{{ leave.id }}</td>
+                            <td>{{ leave.parent_id.admin.id }}</td>
+                            <td>{{ leave.parent_id.admin.first_name }} {{ feedback.parent_id.admin.last_name }}</td>
+                            <td>{{ leave.leave_date }}</td>
+                            <td>{{ leave.leave_message }}</td>
+                            <td>{{ leave.created_at }}</td>
+                            <td>
+                                {% if leave.leave_status == 0 %}
+                                <a href="{% url 'student_approve_leave' leave_id=leave.id %}" class="btn btn-success" >Approve</a>
+                                <a class="btn btn-danger" href="{% url 'student_disapprove_leave' leave_id=leave.id %}" >Disapprove</a>
+                                {% elif leave.leave_status == 1  %}
+                                 <button class="btn btn-warning" disabled="disabled" data-toggle="modal" data-target="#reply_modal">Approved</button>
+                                {% else %}
+                                <button class="btn btn-danger" disabled="disabled" data-toggle="modal" data-target="#reply_modal">Disapproved</button>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+              </div>
+
+
+            </div>
+            <!-- /.card -->
+
+
+
+          </div>
+          </div>
+      </div>
+    </section>
+    <div class="modal fade" id="reply_modal" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Reply</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+    
+            </div>
+            <div class="modal-body">
+              <p>Reply To : <span id="reply_name"></span></p>
+                <input type="hidden" id="reply_id" name="reply_id">
+                <textarea class="form-control" rows="5" id="reply_message"></textarea>
+                <button id="reply_btn" class="btn btn-info btn-block">Reply</button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    <!-- /.content -->
+{% endblock main_content %}
+
+

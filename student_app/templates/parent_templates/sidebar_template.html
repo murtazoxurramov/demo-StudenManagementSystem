@@ -1,0 +1,75 @@
+{% load static %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="{% static 'dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Talabalarni boshqarish tizimi</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        
+        <div class="info">
+          <a href="#" class="d-block">Hush kelibsiz {{ request.user.first_name }} {{ request.user.last_name }}</a>
+        </div>
+      </div>
+
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            {% url 'parent_home' as parent_home %}
+            <a href="{{ parent_home }}" class="nav-link {% if request.path == parent_home %} active {% endif %}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Bosh Sahifa
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            {% url 'parent_view_attendance' as parent_view_attendance %}
+            <a href="{{ parent_view_attendance }}" class="nav-link {% if request.path == parent_view_attendance %} active {% endif %}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Davomatlar
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            {% url 'student_apply_leave' as student_apply_leave %}
+            <a href="{{ student_apply_leave }}" class="nav-link {% if request.path == student_apply_leave %} active {% endif %}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Ta'tilga murojaat qiling
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            {% url 'student_feedback' as student_feedback %}
+            <a href="{{ student_feedback }}" class="nav-link {% if request.path == student_feedback %} active {% endif %}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Fikr-mulohaza
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            {% url 'parent_all_notification' as parent_all_notification %}
+            <a href="{{ parent_all_notification }}" class="nav-link {% if request.path == parent_all_notification %} active {% endif %}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Bildirishnomalar
+              </p>
+            </a>
+          </li>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

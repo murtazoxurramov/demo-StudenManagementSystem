@@ -1,0 +1,81 @@
+{% extends 'admin_templates/base_template.html' %}
+{% block page_title %}
+Manage Student
+
+{% endblock page_title %}
+{% block main_content %}
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+
+           <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Student Details</h3>
+                <a href="/add_student"><button class="btn btn-primary" style="margin-left: 35px;">Add Student</button></a>
+                <a href="{% url 'total_pending_students' %}"><button class="btn btn-success" style="margin-left: 35px;">Pending Students</button></a>
+                <a href="{% url 'total_active_students' %}"><button class="btn btn-info" style="margin-left: 35px;">Active Students</button></a>
+                <div class="card-tools" >
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Phone-1</th>
+                      <th>Phone-2</th>
+                      <th>Address</th>
+                      <th>Status</th>
+                      <th>Subject</th>
+                      <th>Group</th>
+                      <th>Parent</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for student in students %}
+                    <tr>
+                      <td>{{ student.id }}</td>
+                      <td>{{ student.first_name }}</td>
+                      <td>{{ student.last_name }}</td>
+                      <td>{{ student.phone1 }}</td>
+                      <td>{{ student.phone2 }}</td>
+                      <td>{{ student.address }}</td>
+                      <td>{{ student.status }}</td>
+                      <td>{{ student.course_id }}</td>
+                      <td>{{ student.group_id }}</td>
+                      <td>{{ student.parent }}</td>
+                      <td>
+                          <a href="/edit_student/{{ student.id }}" class="btn btn-success">Edit</a>
+                          <a href="/delete_student/{{ student.id }}" class="btn btn-danger" onclick="return confirm('Are you sure about this ?')">Delete</a>
+
+                        </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}
+

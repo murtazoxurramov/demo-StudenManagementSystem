@@ -1,0 +1,78 @@
+{% extends 'parent_templates/base_template.html' %}
+{% load static %}
+{% block page_title %} Fikr-mulohaza {% endblock page_title %}
+{% block main_content %}
+ <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-md-12">
+      <!-- general form elements -->
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Fikr-mulohaza qoldiring</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+       
+        <form action="{% url 'student_feedback_save' %}" method="post">
+            {% csrf_token %}
+          <div class="card-body">
+        
+            <div class="form-group">
+                <label>Fikr-mulohaza</label>
+                <textarea name="feedback_msg" class="form-control" rows="6"></textarea>
+              </div>
+                        
+                <div class="form-group">
+                {% if messages %}
+                  {% for message in messages %}
+                  {% if message.tags == 'error' %}
+                  <div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
+                  {% endif %}
+                  {% if message.tags == 'success' %}
+                  <div class="alert alert-success" style="margin-top:10px">{{ message }}</div>
+                  {% endif %}
+                  {% endfor %}
+                {% endif %}
+              </div>
+
+          </div>
+          <!-- /.card-body -->
+
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-block" id="fetch_student">Fikr-mulohaza qoldiring</button>
+          </div>
+        </form>
+      </div>
+      <!-- /.card -->
+      <div class="card card-primary" style="margin-top: 40px;">
+        <div class="card-header">
+            <h3 class="card-title">Fikr-mulohaza tarixi</h3>
+        </div>
+        <div class="table">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Fikr-mulohaza</th>
+                <th>Fikr-mulohaza javob</th>
+            </tr>
+            {% for row in feedback_data %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.feedback }}</td>
+                    <td>{{ row.feedback_reply }}</td>
+                    
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+      </div>
+
+
+
+    </div>
+    </div>
+  </section>
+{% endblock main_content %}
+  <!-- /.content -->

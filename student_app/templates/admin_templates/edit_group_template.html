@@ -1,0 +1,144 @@
+{% extends 'admin_templates/base_template.html' %}
+{% block page_title %}
+Edit Group  | Name : {{ group.group_name }} |  #ID : {{ group.id }}
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit Group</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" action="/edit_group_save" method="post">
+                {% csrf_token %}
+              <div class="card-body">
+                 <div class="form-group">
+                  <label>Group Name</label>
+                  <input type="text" class="form-control" placeholder="Group Name" name="group_name" value="{{ group.group_name }}">
+                  <input type="hidden"  name="group_id" value="{{ group.id }}">
+                </div>
+                <div class="form-group">
+                  <label>Subjects</label>
+                  <select class="form-control" name="subject">
+                    {% if group.course_id == "" %}
+                      <option value="" selected >None</option>
+                    {% else %}
+                    <option value="">None</option>
+                    {% endif %}
+                      {% for subject in subjects %}
+                      {% if group.course_id.id == subject.id %}
+                      <option value="{{ subject.id }}" selected>{{ subject.course_name }}</option>
+                      {% else %}
+                      <option value="{{ subject.id }}">{{ subject.course_name }}</option>
+                      {% endif %}
+                      {% endfor %}
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Teacher</label>
+                  <select class="form-control" name="teacher">
+                    {% if group.staff_id == "" %}
+                      <option value="" selected >None</option>
+                      {% else %}
+                      <option value="">None</option>
+                      {% endif %}
+                      {% for teacher in teachers %}
+                      {% if group.staff_id.id == teacher.id %}
+                      <option value="{{ teacher.id }}" selected >{{ teacher.admin.first_name }} {{ teacher.admin.last_name }}</option>
+                      {% else %}
+                      <option value="{{ teacher.id }}">{{ teacher.admin.first_name }} {{ teacher.admin.last_name }}</option>
+                      {% endif %}
+                      {% endfor %}
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Days</label>
+                  <select class="form-control" name="days" multiple>
+                    
+                      {% if "Monday" in group.days %}
+                        <option value="Monday" selected>Monday</option>
+                      {% else %}
+                        <option value="Monday" >Monday</option>
+                      {% endif %}
+                      {% if "Tuesday" in group.days %}
+                        <option value="Tuesday" selected>Tuesday</option>
+                      {% else %}
+                        <option value="Tuesday">Tuesday</option>
+                      {% endif %}
+                      {% if "Wednesday" in group.days %}
+                        <option value="Wednesday" selected>Wednesday</option>
+                      {% else %}
+                        <option value="Wednesday">Wednesday</option>
+                      {% endif %}
+                      {% if "Thursday" in group.days %}
+                        <option value="Thursday" selected>Thursday</option>
+                      {% else %}
+                        <option value="Thursday">Thursday</option>
+                      {% endif %}
+                      {% if "Friday" in group.days %}
+                        <option value="Friday" selected>Friday</option>
+                      {% else %}
+                        <option value="Friday">Friday</option>
+                      {% endif %}
+                      {% if "Saturday" in group.days %}
+                        <option value="Saturday" selected >Saturday</option>
+                      {% else %}
+                        <option value="Saturday">Saturday</option>
+                      {% endif %}
+                      {% if "Sunday" in group.days %}
+                        <option value="Sunday"selected>Sunday</option>
+                      {% else %}
+                        <option value="Sunday">Sunday</option>
+                      {% endif %}
+                  </select>
+                </div>
+                  <div class="form-group">
+                      <label>Start Date</label>
+                      <input type="date" class="form-control" placeholder="Start Date" name="start_date" value="{{ group.start_date|date:'Y-m-d' }}">
+                    </div>
+                  <div class="form-group">
+                      <label>End Date</label>
+                      <input type="date" class="form-control" placeholder="End Date" name="end_date" value="{{ group.end_date|date:'Y-m-d' }}">
+                    </div>
+                  </div>
+                      <div class="form-group">
+                      {% if messages %}
+                        {% for message in messages %}
+                        {% if message.tags == 'error' %}
+                        <div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
+                        {% endif %}
+                        {% if message.tags == 'success' %}
+                        <div class="alert alert-success" style="margin-top:10px">{{ message }}</div>
+                        {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary btn-block">Save Group</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+
+
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}
+
+{% block custom_js %}
+
+{% endblock custom_js %}
