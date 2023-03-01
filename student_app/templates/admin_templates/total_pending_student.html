@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Total Pending Student
+Jami Kutilayotgan Talabalar
 
 {% endblock page_title %}
 {% block main_content %}
@@ -14,7 +14,7 @@ Total Pending Student
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Student Details</h3>
+                <h3 class="card-title">Talaba Tafsilotlari</h3>
                 <div class="card-tools" >
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -31,16 +31,16 @@ Total Pending Student
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Phone-1</th>
-                      <th>Phone-2</th>
-                      <th>Address</th>
+                      <th>Ismi/th>
+                      <th>Familiyasi</th>
+                      <th>Telefon raqami</th>
+                      <th>Qo'shimcha Telefon raqam</th>
+                      <th>Manzili</th>
                       <th>Status</th>
-                      <th>Subject</th>
-                      <th>Group</th>
-                      <th>Parent</th>
-                      <th>Action</th>
+                      <th>Mavzu</th>
+                      <th>Gruh</th>
+                      <th>Ota-Ona</th>
+                      <th>Harakat</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -57,8 +57,8 @@ Total Pending Student
                       <td>{{ student.group_id }}</td>
                       <td>{{ student.parent }}</td>
                       <td>
-                          <a href="/edit_student/{{ student.id }}" class="btn btn-success">Edit</a>
-                          <a href="/delete_student/{{ student.id }}" class="btn btn-danger" onclick="return confirm('Are you sure about this ?')">Delete</a>
+                          <a href="/edit_student/{{ student.id }}" class="btn btn-success">Tahrirlash</a>
+                          <a href="/delete_student/{{ student.id }}" class="btn btn-danger" onclick="return confirm('Bunga ishonchingiz komilmi?')">O'chirish</a>
 
                         </td>
                     </tr>

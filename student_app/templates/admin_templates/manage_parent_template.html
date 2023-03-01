@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Manage Parent
+Ota-Onani Boshqarish
 
 {% endblock page_title %}
 {% block main_content %}
@@ -14,8 +14,8 @@ Manage Parent
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Parent Details</h3>
-                <a href="/add_parent"><button class="btn btn-primary" style="margin-left: 35px;">Add Parent</button></a>
+                <h3 class="card-title">Ota-Ona Tafsilotlari</h3>
+                <a href="/add_parent"><button class="btn btn-primary" style="margin-left: 35px;">Ota-Ona Qo'shish</button></a>
                 <div class="card-tools" >
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -32,15 +32,15 @@ Manage Parent
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
+                      <th>Ismi</th>
+                      <th>Familiyasi</th>
                       <th>User Name</th>
                       <th>Email</th>
-                      <th>Address</th>
-                      <th>Phone</th>
-                      <th>Last Login</th>
-                      <th>Date Joined</th>
-                      <th>Action</th>
+                      <th>Manzili</th>
+                      <th>Telefon Raqami</th>
+                      <th>Oxirgi Kirish</th>
+                      <th>Qo'shilgan Sana</th>
+                      <th>Harakat</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -56,8 +56,8 @@ Manage Parent
                       <td>{{ parent.admin.last_login }}</td>
                       <td>{{ parent.admin.date_joined }}</td>
                       <td>
-                          <a href="{% url 'edit_parent' parent.admin.id %}" class="btn btn-success">Edit</a>
-                          <a href="{% url 'delete_parent' parent.admin.id %}" class="btn btn-danger" onclick = "return confirm('Are you sure about this ?')">Delete</a>
+                          <a href="{% url 'edit_parent' parent.admin.id %}" class="btn btn-success">Tahrirlash</a>
+                          <a href="{% url 'delete_parent' parent.admin.id %}" class="btn btn-danger" onclick = "return confirm('Bunga ishonchingiz komilmi?')">O'chirish</a>
 
                         </td>
                     </tr>

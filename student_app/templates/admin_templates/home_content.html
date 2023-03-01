@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% load static %}
-{% block page_title %} Home {% endblock page_title %}
+{% block page_title %} Bosh Sahifa {% endblock page_title %}
 {% block main_content %}
  <section class="content">
     <div class="container-fluid">
@@ -12,12 +12,12 @@
             <div class="inner">
               <h3>{{ students }}</h3>
 
-              <p>Total Students</p>
+              <p>Jami Talabalar</p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="{% url 'manage_student' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'manage_student' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -27,12 +27,12 @@
             <div class="inner">
               <h3>{{ total_pending_students }}</h3>
 
-              <p>Total Pending Students</p>
+              <p>Jami Kutilayotgan Talabalar</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="{% url 'total_pending_students' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'total_pending_students' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -42,12 +42,12 @@
             <div class="inner">
               <h3>{{ total_active_students }}</h3>
 
-              <p>Total Active Students</p>
+              <p>Jami Aktiv Talabalar</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="{% url 'total_active_students' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'total_active_students' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -57,12 +57,12 @@
             <div class="inner">
               <h3>{{ groups }}</h3>
 
-              <p>Total Group</p>
+              <p>Jami Gruhlar</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="{% url 'manage_group' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'manage_group' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-6">
@@ -71,12 +71,12 @@
             <div class="inner">
               <h3>{{ total_attendance }}</h3>
 
-              <p>Total Attendance</p>
+              <p>Jami Davomat</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="{% url 'admin_view_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'admin_view_attendance' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-6">
@@ -85,12 +85,12 @@
             <div class="inner">
               <h3>{{ attendance_absent|floatformat:2 }}<sup style="font-size: 20px">%</sup></h3>
 
-              <p>Absent Students</p>
+              <p>Yo'q talabalar</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="{% url 'admin_view_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'admin_view_attendance' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-6">
@@ -99,12 +99,12 @@
             <div class="inner">
               <h3>{{ attendance_present|floatformat:2 }}<sup style="font-size: 20px">%</sup></h3>
 
-              <p>Present Students</p>
+              <p>Hozirgi Talabalar</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="{% url 'admin_view_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'admin_view_attendance' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 col-6">
@@ -113,12 +113,12 @@
             <div class="inner">
               <h3>{{ subjects }}</h3>
 
-              <p>Total Subjects</p>
+              <p>Jami Mavzular</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="{% url 'manage_subject' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'manage_subject' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

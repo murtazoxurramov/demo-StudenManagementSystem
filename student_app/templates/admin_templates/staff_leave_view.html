@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Staff apply for leave
+Xodimlar Uchun Ta'tilni Tasdiqlash
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Staff apply for leave
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Staff Apply for leave</h3>
+                <h3 class="card-title">Xodimlar Uchun Ta'tilni Tasdiqlash</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -20,12 +20,12 @@ Staff apply for leave
                 <table class="table">
                     <tr>
                         <th>ID</th>
-                        <th>Staff ID</th>
-                        <th>Staff Name</th>
-                        <th>Leave Date</th>
-                        <th>Leave Message</th>
-                        <th>Apply On</th>
-                        <th>Action</th>
+                        <th>Xodim ID</th>
+                        <th>Xodim FIO</th>
+                        <th>Ta'til sanasi</th>
+                        <th>Qoldirilgan Xabar</th>
+                        <th>Tasdiqlash</th>
+                        <th>Harakat</th>
                     </tr>
                     {% for leave in leaves %}
                         <tr>
@@ -37,12 +37,12 @@ Staff apply for leave
                             <td>{{ leave.created_at }}</td>
                             <td>
                                 {% if leave.leave_status == 0 %}
-                                <a href="{% url 'staff_approve_leave' leave_id=leave.id %}" class="btn btn-success" >Approve</a>
-                                <a class="btn btn-danger" href="{% url 'staff_disapprove_leave' leave_id=leave.id %}" >Disapprove</a>
+                                <a href="{% url 'staff_approve_leave' leave_id=leave.id %}" class="btn btn-success" >Tasdiqlash</a>
+                                <a class="btn btn-danger" href="{% url 'staff_disapprove_leave' leave_id=leave.id %}" >Rad etish</a>
                                 {% elif leave.leave_status == 1  %}
-                                 <button class="btn btn-warning" disabled="disabled" data-toggle="modal" data-target="#reply_modal">Approved</button>
+                                 <button class="btn btn-warning" disabled="disabled" data-toggle="modal" data-target="#reply_modal">Tasdiqlangan</button>
                                 {% else %}
-                                <button class="btn btn-danger" disabled="disabled" data-toggle="modal" data-target="#reply_modal">Disapproved</button>
+                                <button class="btn btn-danger" disabled="disabled" data-toggle="modal" data-target="#reply_modal">Rad etilgan</button>
                                 {% endif %}
                             </td>
                         </tr>

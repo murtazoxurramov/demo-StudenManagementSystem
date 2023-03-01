@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Add Group
+Gruh Qo'shish
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Add Group
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add Group</h3>
+                <h3 class="card-title">Gruh Qo'shish</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,11 +19,11 @@ Add Group
                   {% csrf_token %}
                 <div class="card-body">
                    <div class="form-group">
-                    <label>Group Name</label>
+                    <label>Gruh Nomi</label>
                     <input type="text" class="form-control" placeholder="Group Name" name="group_name">
                   </div>
                   <div class="form-group">
-                    <label>Subjects</label>
+                    <label>Mavzular</label>
                     <select class="form-control" name="subject">
                         <option value="">None</option>
                         {% for subject in subjects %}
@@ -32,7 +32,7 @@ Add Group
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Teacher</label>
+                    <label>O'qituvchi</label>
                     <select class="form-control" name="teacher">
                         <option value="">None</option>
                         {% for teacher in teachers %}
@@ -41,23 +41,23 @@ Add Group
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Days</label>
+                    <label>Kunlar</label>
                     <select class="form-control" name="days" multiple>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                        <option value="Saturday">Saturday</option>
-                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Dushanba</option>
+                        <option value="Tuesday">Seshanba</option>
+                        <option value="Wednesday">Chorshanba</option>
+                        <option value="Thursday">Payshanba</option>
+                        <option value="Friday">Juma</option>
+                        <option value="Saturday">Shanba</option>
+                        <option value="Sunday">Yakshanba</option>
                     </select>
                   </div>
                     <div class="form-group">
-                        <label>Start Date</label>
+                        <label>Boshlanish sanasi</label>
                         <input type="date" class="form-control" placeholder="Start Date" name="start_date">
                       </div>
                     <div class="form-group">
-                        <label>End Date</label>
+                        <label>Tugash sanasi</label>
                         <input type="date" class="form-control" placeholder="End Date" name="end_date">
                       </div>
                     </div>
@@ -79,7 +79,7 @@ Add Group
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Add Group</button>
+                  <button type="submit" class="btn btn-primary btn-block">Gruh Qo'shish</button>
                 </div>
               </form>
             </div>

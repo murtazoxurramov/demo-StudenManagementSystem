@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Staff Feedback
+Xodimlarning Fikr-mulohazalari
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Staff Feedback
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Staff Feedback</h3>
+                <h3 class="card-title">Xodimlarning Fikr-mulohazalari</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -20,11 +20,11 @@ Staff Feedback
                 <table class="table">
                     <tr>
                         <th>ID</th>
-                        <th>Staff ID</th>
-                        <th>Staff Name</th>
-                        <th>Message</th>
-                        <th>Sended On</th>
-                        <th>Reply</th>
+                        <th>Xodim ID-si</th>
+                        <th>Xodim FIO</th>
+                        <th>Xabar</th>
+                        <th>Yuborilgan</th>
+                        <th>Javob berish</th>
                     </tr>
                     {% for feedback in feedbacks %}
                         <tr>
@@ -61,7 +61,7 @@ Staff Feedback
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Reply</h4>
+              <h4 class="modal-title">Javob berish</h4>
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
     
             </div>
@@ -69,10 +69,10 @@ Staff Feedback
               <p>Reply To : <span id="reply_name"></span></p>
                 <input type="hidden" id="reply_id" name="reply_id">
                 <textarea class="form-control" rows="5" id="reply_message"></textarea>
-                <button id="reply_btn" class="btn btn-info btn-block">Reply</button>
+                <button id="reply_btn" class="btn btn-info btn-block">Javob berish</button>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Yopish</button>
             </div>
           </div>
     

@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Manage Group
+Guruhni Boshqarish
 
 {% endblock page_title %}
 {% block main_content %}
@@ -14,8 +14,8 @@ Manage Group
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Group Details</h3>
-                <a href="{% url 'add_group' %}"><button class="btn btn-primary" style="margin-left: 35px;">Add Group</button></a>
+                <h3 class="card-title">Guruh Tafsilotlari</h3>
+                <a href="{% url 'add_group' %}"><button class="btn btn-primary" style="margin-left: 35px;">Gruh Qo'shish</button></a>
                 <div class="card-tools" >
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -32,13 +32,13 @@ Manage Group
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Group Name</th>
-                      <th>Subject</th>
-                      <th>Teacher</th>
-                      <th>Days</th>
-                      <th>Start Date</th>
-                      <th>End Date</th>
-                      <th>Action</th>
+                      <th>Gruh Nomi</th>
+                      <th>Mavzu</th>
+                      <th>O'qituvchi</th>
+                      <th>Kunlar</th>
+                      <th>Boshlanish Sanasi</th>
+                      <th>Tugash Sanasi</th>
+                      <th>Harakat</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -52,8 +52,8 @@ Manage Group
                       <td>{{ group.start_date }}</td>
                       <td>{{ group.end_date }}</td>
                       <td>
-                          <a href="/edit_group/{{ group.id }}" class="btn btn-success">Edit</a>
-                          <a href="/delete_group/{{ group.id }}" class="btn btn-danger" onclick="return confirm('Are you sure about this ?')">Delete</a>
+                          <a href="/edit_group/{{ group.id }}" class="btn btn-success">Tahrirlash</a>
+                          <a href="/delete_group/{{ group.id }}" class="btn btn-danger" onclick="return confirm('Bunga ishonchingiz komilmi?')">O'chirish</a>
 
                         </td>
                     </tr>

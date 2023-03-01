@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Staff Notification
+Xodimlar Bildirishnomalari
 
 {% endblock page_title %}
 {% block main_content %}
@@ -14,7 +14,7 @@ Staff Notification
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Staffs</h3>
+                <h3 class="card-title">Xodimlar</h3>
                 <div class="card-tools" >
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -31,12 +31,12 @@ Staff Notification
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
+                      <th>Ismi</th>
+                      <th>Familiyasi</th>
                       <th>User Name</th>
                       <th>Email</th>
-                      <th>Address</th>
-                      <th>Action</th>
+                      <th>Manzili</th>
+                      <th>Harakat</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -70,7 +70,7 @@ Staff Notification
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Send Notification to <span id="name_span"></span></h4>
+            <h4 class="modal-title">Bildirishnoma Yuborish <span id="name_span"></span></h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
@@ -79,11 +79,11 @@ Staff Notification
                <input type="hidden" name="staff_id" class="form-control" id="staff_id">
             </div>
             <div class="form-group">
-              <button class="btn btn-info btn-block send_notification_btn" type="button">Send Notification</button>
+              <button class="btn btn-info btn-block send_notification_btn" type="button">Bildirishnoma Yuborish</button>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Yopish</button>
           </div>
         </div>
   

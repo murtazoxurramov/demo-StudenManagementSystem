@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% load static %}
-{% block page_title %} View Attendance {% endblock page_title %}
+{% block page_title %} Davomatni Ko'rish {% endblock page_title %}
 {% block main_content %}
  <section class="content">
     <div class="container-fluid">
@@ -10,7 +10,7 @@
       <!-- general form elements -->
       <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">View Attendance</h3>
+          <h3 class="card-title">Davomatni Ko'rish</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -19,7 +19,7 @@
             
             
             <div class="form-group">
-              <label>Group</label>
+              <label>Gruh</label>
               <select class="form-control" name="group" id="group">
                   {% for group in groups %}
                   <option value="{{ group.id }}">{{ group.group_name }}</option>
@@ -29,11 +29,11 @@
             
             
             <div class="form-group">
-              <button type="button" class="btn btn-primary btn-block" id="fetch_attendance">Fetch Attendance Date</button>
+              <button type="button" class="btn btn-primary btn-block" id="fetch_attendance">Davomat Sanasini Olish</button>
             </div>
 
             <div class="form-group" id="attendance_block" style="display: none;">
-              <label>Attendance Date</label>
+              <label>Davomat Sanasi</label>
               <select class="form-control" name="attendance_date" id="attendance_date">
                 
               </select>
@@ -43,7 +43,7 @@
 
               </div>
               <div class="form-group" id="fetch_student_block" style="display: none;">
-                <button type="button" class="btn btn-primary btn-block" id="fetch_student">Fetch Student Data</button>
+                <button type="button" class="btn btn-primary btn-block" id="fetch_student">Davomat Sanasini Olish</button>
               </div>
             </div>
               

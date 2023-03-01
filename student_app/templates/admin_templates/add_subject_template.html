@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Add Subject
+Mavzu Qo'shish
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Add Subject
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add Subject</h3>
+                <h3 class="card-title">Mavzu Qo'shish</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Add Subject
                   {% csrf_token %}
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Subject name</label>
+                    <label>Mavzu Nomi</label>
                     <input type="text" class="form-control" name="course_name" placeholder="Enter Subject name" autocomplete="off">
                   </div>
                       <div class="form-group">
@@ -39,7 +39,7 @@ Add Subject
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Add Subject</button>
+                  <button type="submit" class="btn btn-primary btn-block">Mavzuni Qo'shish</button>
                 </div>
               </form>
             </div>

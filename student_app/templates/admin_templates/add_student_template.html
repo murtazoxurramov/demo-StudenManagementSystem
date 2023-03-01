@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Add Student
+Talaba Qo'shish
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Add Student
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add Student</h3>
+                <h3 class="card-title">Talaba Qo'shish</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,34 +19,34 @@ Add Student
                   {% csrf_token %}
                 <div class="card-body">
                    <div class="form-group">
-                    <label>First Name</label>
+                    <label>Ismi</label>
                     <input type="text" class="form-control" placeholder="First Name" name="first_name">
                   </div>
                    <div class="form-group">
-                    <label>Last Name</label>
+                    <label>Familiyasi</label>
                     <input type="text" class="form-control" placeholder="Last Name" name="last_name">
                   </div>
                   <div class="form-group">
-                    <label>Address</label>
+                    <label>Manzili</label>
                     <input type="text" class="form-control" placeholder="Address" name="address">
                   </div>
                   <div class="form-group">
-                    <label>Phone1</label>
+                    <label>Telefon raqami</label>
                     <input type="text" class="form-control" placeholder="Phone" name="phone1">
                   </div>
                   <div class="form-group">
-                    <label>Phone2</label>
+                    <label>Qo'shimcha Telefon raqam</label>
                     <input type="text" class="form-control" placeholder="Phone" name="phone2">
                   </div>
                   <div class="form-group">
-                    <label>Status</label>
+                    <label>Statusi</label>
                     <select class="form-control" name="status" id="">
-                        <option value="pending">Pending</option>
-                        <option value="active">Active</option>
+                        <option value="pending">Kutilmoqda</option>
+                        <option value="active">Aktiv</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Subjects</label>
+                    <label>Mavzular</label>
                     <select class="form-control" name="subject">
                         <option value="">None</option>
                         {% for subject in subjects %}
@@ -55,7 +55,7 @@ Add Student
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Group</label>
+                    <label>Gruh</label>
                     <select class="form-control" name="group">
                         <option value="">None</option>
                         {% for group in groups %}
@@ -64,7 +64,7 @@ Add Student
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Parent</label>
+                    <label>Ota-Ona</label>
                     <select class="form-control" name="parent">
                         <option value="">None</option>
                         {% for parent in parents %}
@@ -89,7 +89,7 @@ Add Student
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Add Student</button>
+                  <button type="submit" class="btn btn-primary btn-block">Talabani Qo'shish</button>
                 </div>
               </form>
             </div>

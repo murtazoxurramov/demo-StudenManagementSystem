@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Manage Subject
+Mavzuni Boshqarish
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -12,8 +12,8 @@ Manage Subject
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Subject Details</h3>
-                <a href="{% url 'add_subject' %}"><button class="btn btn-primary" style="margin-left: 35px;">Add Subject</button></a>
+                <h3 class="card-title">Mavzu Tafsilotlari</h3>
+                <a href="{% url 'add_subject' %}"><button class="btn btn-primary" style="margin-left: 35px;">Mavzu Qo'shish</button></a>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -30,8 +30,8 @@ Manage Subject
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Subject Name</th>
-                      <th>Action</th>
+                      <th>Mavzu Nomi</th>
+                      <th>Harakat</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -40,8 +40,8 @@ Manage Subject
                       <td>{{ subject.id }}</td>
                       <td>{{ subject.course_name }}</td>
                       <td>
-                        <a href="/edit_subject/{{ subject.id }}" class="btn btn-success">Edit</a>
-                        <a href="/delete_subject/{{ subject.id }}" class="btn btn-danger" onclick="return confirm('Are you sure about this ?')">Delete</a>
+                        <a href="/edit_subject/{{ subject.id }}" class="btn btn-success">Tahrirlash</a>
+                        <a href="/delete_subject/{{ subject.id }}" class="btn btn-danger" onclick="return confirm('Bunga ishonchingiz komilmi?')">O'chirish</a>
                       </td>
                     </tr>
                   {% endfor %}

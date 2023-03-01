@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Manage Student
+Talabani Boshqarish
 
 {% endblock page_title %}
 {% block main_content %}
@@ -14,10 +14,10 @@ Manage Student
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Student Details</h3>
-                <a href="/add_student"><button class="btn btn-primary" style="margin-left: 35px;">Add Student</button></a>
-                <a href="{% url 'total_pending_students' %}"><button class="btn btn-success" style="margin-left: 35px;">Pending Students</button></a>
-                <a href="{% url 'total_active_students' %}"><button class="btn btn-info" style="margin-left: 35px;">Active Students</button></a>
+                <h3 class="card-title">Talaba Tafsilotlari</h3>
+                <a href="/add_student"><button class="btn btn-primary" style="margin-left: 35px;">Talaba Qo'shish</button></a>
+                <a href="{% url 'total_pending_students' %}"><button class="btn btn-success" style="margin-left: 35px;">Kutilayotgan Talaba</button></a>
+                <a href="{% url 'total_active_students' %}"><button class="btn btn-info" style="margin-left: 35px;">Aktiv Talaba</button></a>
                 <div class="card-tools" >
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -34,16 +34,16 @@ Manage Student
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Phone-1</th>
-                      <th>Phone-2</th>
-                      <th>Address</th>
+                      <th>Ismi</th>
+                      <th>Familiyasi</th>
+                      <th>Telefon Raqami</th>
+                      <th>Qo'shimcha Telefon Raqam</th>
+                      <th>Manzili</th>
                       <th>Status</th>
-                      <th>Subject</th>
-                      <th>Group</th>
-                      <th>Parent</th>
-                      <th>Action</th>
+                      <th>Mavzu</th>
+                      <th>Gruh</th>
+                      <th>Ota-Ona</th>
+                      <th>Harakat</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -60,8 +60,8 @@ Manage Student
                       <td>{{ student.group_id }}</td>
                       <td>{{ student.parent }}</td>
                       <td>
-                          <a href="/edit_student/{{ student.id }}" class="btn btn-success">Edit</a>
-                          <a href="/delete_student/{{ student.id }}" class="btn btn-danger" onclick="return confirm('Are you sure about this ?')">Delete</a>
+                          <a href="/edit_student/{{ student.id }}" class="btn btn-success">Tahrirlash</a>
+                          <a href="/delete_student/{{ student.id }}" class="btn btn-danger" onclick="return confirm('Bunga ishonchingiz komilmi?')">O'chirish</a>
 
                         </td>
                     </tr>

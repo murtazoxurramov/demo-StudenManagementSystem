@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Edit Subject  | Name : {{ subject.course_name }} |  #ID : {{ subject.id }}
+Mavzuni Tahrirlash | Nomi : {{ subject.course_name }} |  #ID : {{ subject.id }}
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Edit Subject  | Name : {{ subject.course_name }} |  #ID : {{ subject.id }}
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Subject</h3>
+                <h3 class="card-title">Mavzuni Tahrirlash</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -20,7 +20,7 @@ Edit Subject  | Name : {{ subject.course_name }} |  #ID : {{ subject.id }}
                 <div class="card-body">                  
                    
                    <div class="form-group">
-                    <label>Subject Name</label>
+                    <label>Mavzuni Nomi</label>
                     <input type="text" class="form-control" placeholder="Subject Name" name="course_name" value="{{ subject.course_name }}">
                     <input type="hidden"  name="subject_id" value="{{ subject.id }}">
                   </div>
@@ -43,7 +43,7 @@ Edit Subject  | Name : {{ subject.course_name }} |  #ID : {{ subject.id }}
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Subject</button>
+                  <button type="submit" class="btn btn-primary btn-block">Mavzuni Saqlash</button>
                 </div>
               </form>
             </div>

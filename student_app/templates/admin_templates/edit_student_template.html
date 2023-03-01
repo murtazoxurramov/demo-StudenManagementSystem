@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base_template.html' %}
 {% block page_title %}
-Edit Student  | Name : {{ student.first_name }} {{ student.last_name }} |  #ID : {{ student.id }}
+Talabani Tahrirlash | Ism Sharifi : {{ student.first_name }} {{ student.last_name }} |  #ID : {{ student.id }}
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Edit Student  | Name : {{ student.first_name }} {{ student.last_name }} |  #ID :
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Student</h3>
+                <h3 class="card-title">Talabani Tahrirlash</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,43 +19,43 @@ Edit Student  | Name : {{ student.first_name }} {{ student.last_name }} |  #ID :
                   {% csrf_token %}
                 <div class="card-body">                  
                    <div class="form-group">
-                    <label>First Name</label>
+                    <label>Ismi</label>
                     <input type="text" class="form-control" placeholder="First Name" name="first_name" value="{{ student.first_name }}">
                   </div>
                    <div class="form-group">
-                    <label>Last Name</label>
+                    <label>Familiyasi</label>
                     <input type="text" class="form-control" placeholder="Last Name" name="last_name" value="{{ student.last_name }}">
                     <input type="hidden"  name="student_id" value="{{ student.id }}">
                   </div>
                   <div class="form-group">
-                    <label>Phone-1</label>
+                    <label>Telefon raqami</label>
                     <input type="text" class="form-control" name="phone1" placeholder="Phone-1" value="{{ student.phone1 }}">
                   </div>
                   <div class="form-group">
-                    <label>Phone-2</label>
+                    <label>Qo'shimcha Telefon raqam</label>
                     <input type="text" class="form-control" name="phone2" placeholder="Phone-2" value="{{ student.phone2 }}">
                   </div>
                   <div class="form-group">
-                    <label>Address</label>
+                    <label>Manzili</label>
                     <input type="text" class="form-control" placeholder="Address" name="address" value="{{ student.address }}">
                   </div>
                   <div class="form-group">
                     <label>Status</label>
                     <select class="form-control" name="status">
                       {% if student.status == 'pending' %}
-                        <option value="pending" selected>Pending</option>
+                        <option value="pending" selected>Kutilmoqda</option>
                       {% else %}
-                        <option value="pending">Pending</option>
+                        <option value="pending">Kutilmoqda</option>
                       {% endif %}
                       {% if student.status == 'active' %}
-                        <option value="active" selected>Active</option>
+                        <option value="active" selected>Aktiv</option>
                       {% else %}
-                        <option value="active">Active</option>
+                        <option value="active">Aktiv</option>
                       {% endif %}
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Subjects</label>
+                    <label>Mavzular</label>
                     <select class="form-control" name="subject">
                       {% if student.couse_id == "" %}
                       <option value="" selected >None</option>
@@ -72,7 +72,7 @@ Edit Student  | Name : {{ student.first_name }} {{ student.last_name }} |  #ID :
                     </select>
                   </div>
                   <div class="form-group">
-                    <label>Group</label>
+                    <label>Gruh</label>
                     <select class="form-control" name="group">
                       {% if student.group_id == "" %}
                         <option value="" selected>None</option>
@@ -88,7 +88,7 @@ Edit Student  | Name : {{ student.first_name }} {{ student.last_name }} |  #ID :
                         {% endfor %}
                     </select>
                     <div class="form-group">
-                      <label>Parent</label>
+                      <label>Ota-Ona</label>
                       <select class="form-control" name="parent">
                         {% if student.parent == "" %}
                           <option value="" selected >None</option>
@@ -122,7 +122,7 @@ Edit Student  | Name : {{ student.first_name }} {{ student.last_name }} |  #ID :
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Student</button>
+                  <button type="submit" class="btn btn-primary btn-block">Talabani Saqlash</button>
                 </div>
               </form>
             </div>

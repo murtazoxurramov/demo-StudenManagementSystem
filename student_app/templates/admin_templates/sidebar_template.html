@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="{% url 'admin_home' %}" class="brand-link">
       <img src="{% static 'dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Andijon Ta'lim Tizim</span>
+      <span class="brand-text font-weight-light">IT Center Ta'lim Tizim</span>
     </a>
 
     <!-- Sidebar -->
@@ -12,7 +12,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
         <div class="info">
-          <a href="#" class="d-block">Welcome {{ request.user.username }}</a>
+          <a href="#" class="d-block">Xush kelibsiz {{ request.user.username }}</a>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
             <a href="{{ staffs }}" class="nav-link {% if request.path == staffs %} active {% endif %}{% if request.path == add_staff %} active {% endif %}{% if request.path == edit_staff %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Teachers
+                O'qituvchilar
               </p>
             </a>
           </li>
@@ -40,7 +40,7 @@
             <a href="{{ parents }}" class="nav-link {% if request.path == parents %} active {% endif %}{% if request.path == add_parent %} active {% endif %}{% if request.path == edit_parent %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Parents
+                Ota-Onalar
               </p>
             </a>
           </li>
@@ -53,7 +53,7 @@
             <a href="{{ students }}" class="nav-link {% if request.path == students %} active {% endif %}{% if request.path == add_student %} active {% endif %}{% if request.path == edit_student %} active {% endif %}{% if request.path == total_pending_students %} active {% endif %}{% if request.path == total_active_students %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Students
+                Talabalar
               </p>
             </a>
           </li>
@@ -65,7 +65,7 @@
             <a href="{{ subjects }}" class="nav-link {% if request.path == subjects %} active {% endif %}{% if request.path == add_subject %} active {% endif %}{% if request.path == edit_subject %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Subjects
+                Mavzular
               </p>
             </a>
           </li>
@@ -78,7 +78,7 @@
             <a href="{{ groups }}" class="nav-link {% if request.path == groups %} active {% endif %}{% if request.path == add_group %} active {% endif %}{% if request.path == edit_group %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Groups
+                Gruhlar
               </p>
             </a>
           </li>
@@ -87,7 +87,7 @@
             <a href="{{ admin_view_attendance }}" class="nav-link {% if request.path == admin_view_attendance %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                View Attendance
+                Davomatni Ko'rish
               </p>
             </a>
           </li>
@@ -96,7 +96,7 @@
             <a href="{{ parent_feedback_message }}" class="nav-link{% if request.path == parent_feedback_message %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Parent Feedback
+                Ota-Onalarning Fikr-mulohazalari
               </p>
             </a>
           </li>
@@ -105,7 +105,7 @@
             <a href="{{ staff_feedback_message }}" class="nav-link {% if request.path == staff_feedback_message %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Staff Feedback
+                Xodimlarning Fikr-mulohazalari
               </p>
             </a>
           </li>
@@ -114,7 +114,7 @@
             <a href="{{ student_leave_view }}" class="nav-link {% if request.path == student_leave_view %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Parent Leave
+                Ota-Ona Ta'tili
               </p>
             </a>
           </li>
@@ -123,7 +123,7 @@
             <a href="{{ staff_leave_view }}" class="nav-link {% if request.path == staff_leave_view %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Staff Leave
+                Xodimlar Ta'tili
               </p>
             </a>
           </li>
@@ -132,7 +132,7 @@
             <a href="{{ admin_send_notification_staff }}" class="nav-link {% if request.path == admin_send_notification_staff %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Send Staff Notification
+                Xodimlarga Bildirishnoma Yuborish
               </p>
             </a>
           </li>
@@ -141,7 +141,7 @@
             <a href="{{ admin_send_notification_parent }}" class="nav-link {% if request.path == admin_send_notification_parent %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Send Parent Notification
+                Ota-onalarga Bildirishnoma Yuborish
               </p>
             </a>
           </li>
