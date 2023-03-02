@@ -1,6 +1,6 @@
 {% extends 'oqituvchi_templates/base_template.html' %}
 {% load static %}
-{% block page_title %} Take Attendance {% endblock page_title %}
+{% block page_title %} Ishtirok etish {% endblock page_title %}
 {% block main_content %}
  <section class="content">
     <div class="container-fluid">
@@ -10,7 +10,7 @@
       <!-- general form elements -->
       <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Take Attendance</h3>
+          <h3 class="card-title">Ishtirok etish</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -19,7 +19,7 @@
             
             
             <div class="form-group">
-              <label>Group</label>
+              <label>Gruh</label>
               <select class="form-control" name="group" id="group">
                   {% for group in groups %}
                   <option value="{{ group.id }}">{{ group.group_name }}</option>
@@ -45,7 +45,7 @@
           <!-- /.card-body -->
 
           <div class="card-footer">
-            <button type="button" class="btn btn-primary btn-block" id="fetch_student">Fetch Student</button>
+            <button type="button" class="btn btn-primary btn-block" id="fetch_student">Talabani olish</button>
           </div>
           <div id="student_data" class="card-footer">
 

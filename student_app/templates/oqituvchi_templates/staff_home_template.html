@@ -1,6 +1,6 @@
 {% extends 'oqituvchi_templates/base_template.html' %}
 {% load static %}
-{% block page_title %} Teacher Dashboard {% endblock page_title %}
+{% block page_title %} O'qituvchi boshqaruv paneli {% endblock page_title %}
 {% block main_content %}
  <section class="content">
     <div class="container-fluid">
@@ -17,7 +17,7 @@
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="{% url 'staff_take_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'staff_take_attendance' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -27,12 +27,12 @@
             <div class="inner">
               <h3>{{ attendance_count }}</h3>
 
-              <p>Total Attendance Taken</p>
+              <p>Qabul qilingan umumiy davomat</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="{% url 'staff_take_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'staff_take_attendance' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -42,12 +42,12 @@
             <div class="inner">
               <h3>{{ leave_count }}</h3>
 
-              <p>Total Approve Leave Taken</p>
+              <p>Jami qabul qilingan ta'tillar</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="{% url 'staff_apply_leave' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{% url 'staff_apply_leave' %}" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -58,12 +58,12 @@
             <div class="inner">
               <h3>{{ group }}</h3>
 
-              <p>Total Groups</p>
+              <p>Umumiy Gruhlar</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Batafsil ma'lumot <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

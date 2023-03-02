@@ -1,6 +1,6 @@
 {% extends 'oqituvchi_templates/base_template.html' %}
 {% load static %}
-{% block page_title %} Feedback Message {% endblock page_title %}
+{% block page_title %} Fikr-mulohazalar {% endblock page_title %}
 {% block main_content %}
  <section class="content">
     <div class="container-fluid">
@@ -10,7 +10,7 @@
       <!-- general form elements -->
       <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Leave a Feedback Message</h3>
+          <h3 class="card-title">Fikr-mulohaza qoldiring</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -20,7 +20,7 @@
           <div class="card-body">
         
             <div class="form-group">
-                <label>Feedback Message</label>
+                <label>Fikr-mulohazalar</label>
                 <textarea name="feedback_msg" class="form-control" rows="6"></textarea>
               </div>
                         
@@ -48,14 +48,14 @@
       <!-- /.card -->
       <div class="card card-primary" style="margin-top: 40px;">
         <div class="card-header">
-            <h3 class="card-title">Feedback History</h3>
+            <h3 class="card-title">Fikr-mulohazalar tarixi</h3>
         </div>
         <div class="table">
         <table class="table">
             <tr>
                 <th>ID</th>
-                <th>Feedback Message</th>
-                <th>Feedack Reply</th>
+                <th>Fikr-mulohazalar</th>
+                <th>Fikr-mulohazaga javob berish</th>
             </tr>
             {% for row in feedback_data %}
                 <tr>

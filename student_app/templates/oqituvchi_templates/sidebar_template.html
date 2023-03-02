@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="{% static 'dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Student Management</span>
+      <span class="brand-text font-weight-light">Talabalarni Boshqarish</span>
     </a>
 
     <!-- Sidebar -->
@@ -12,7 +12,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
         <div class="info">
-          <a href="#" class="d-block">Welcome {{ request.user.username }}</a>
+          <a href="#" class="d-block">Xush kelibsiz {{ request.user.username }}</a>
         </div>
       </div>
 
@@ -27,7 +27,7 @@
             <a href="{{ staff_home }}" class="nav-link {% if request.path == staff_home %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Home
+                Bosh Sahifa
               </p>
             </a>
           </li>
@@ -36,7 +36,7 @@
             <a href="{{ staff_take_attendance }}" class="nav-link {% if request.path == staff_take_attendance %} active {% endif %}">
               <i class="ion ion-person-add"></i>
               <p>
-                Take Attendance
+                Ishtirokchilar
               </p>
             </a>
           </li>
@@ -45,7 +45,7 @@
             <a href="{{ staff_update_attendance }}" class="nav-link {% if request.path == staff_update_attendance %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                View Update Attendance
+                Yangilangi Ishtirokchilarni Ko'rish
               </p>
             </a>
           </li>
@@ -54,7 +54,7 @@
             <a href="{{ staff_apply_leave }}" class="nav-link {% if request.path == staff_apply_leave %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Apply Leave
+                Ta'tilga Murojaat Qilish
               </p>
             </a>
           </li>
@@ -63,7 +63,7 @@
             <a href="{{ staff_feedback }}" class="nav-link {% if request.path == staff_feedback %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Feedback
+                Fikr-mulohazalar
               </p>
             </a>
           </li>
@@ -72,7 +72,7 @@
             <a href="{{ staff_all_notification }}" class="nav-link {% if request.path == staff_all_notification %} active {% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Notifications
+                Bildirishnomalar
               </p>
             </a>
           </li>
